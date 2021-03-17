@@ -74,7 +74,7 @@ find_dam_first_last_lines <- function(file,
 
   first_and_last <- datetimes_dt[c(1, .N)]
 
-  if(nrow(first_and_last) !=2)
+  if(nrow(first_and_last) !=3)
     stop("No data in selected date range")
   first_and_last[, datetime := NULL]
   setnames(first_and_last, "datetime_posix", "datetime")
